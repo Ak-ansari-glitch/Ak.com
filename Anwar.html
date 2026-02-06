@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Rose Day My Love</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        font-family: 'Segoe Script', cursive;
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ),
+        url('https://images.unsplash.com/photo-1526045478516-99145907023c');
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        color: #fff;
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(8px);
+        border-radius: 20px;
+        padding: 40px;
+        max-width: 500px;
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+        font-size: 3em;
+        color: #ff4d6d;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        color: #ffd6e0;
+    }
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin-top: 20px;
+    }
+
+    .heart {
+        font-size: 2.5em;
+        animation: beat 1.2s infinite;
+        color: #ff1e56;
+    }
+
+    @keyframes beat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.3); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Falling Roses */
+    .rose {
+        position: absolute;
+        top: -50px;
+        font-size: 24px;
+        animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(110vh) rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>Happy Rose Day 🌹</h1>
+        <h2>My Beautiful Wife</h2>
+        <p>
+            "Phoolon jaisi ho aap, phoolon jaisi hi muskan hai,
+Is gulaab ke saath bhej raha hoon apna dil,
+Kyunki aap hi meri jaan aur meri pehchan ho."
+English Vibe: You are as delicate as a flower, and your smile is just as sweet. Sending my heart with this rose, because you are my everything.
+
+"Phool toh mil jayenge sheher mein bohot se,
+Magar teri muskurahat jaisa koi gulaab nahi.
+Screen par hi sahi, qubool kijiye ye tohfa,
+Kyuki hamari mohabbat ka koi jawaab nahi."
+        </p>
+        <p>
+            Forever yours 💖
+        </p>
+        <div class="heart">❤️</div>
+    </div>
+</div>
+
+<script>
+    // Create falling roses
+    for (let i = 0; i < 20; i++) {
+        let rose = document.createElement("div");
+        rose.className = "rose";
+        rose.innerHTML = "🌹";
+        rose.style.left = Math.random() * 100 + "vw";
+        rose.style.animationDuration = (5 + Math.random() * 5) + "s";
+        rose.style.fontSize = (20 + Math.random() * 20) + "px";
+        document.body.appendChild(rose);
+    }
+</script>
+
+</body>
+</html>
